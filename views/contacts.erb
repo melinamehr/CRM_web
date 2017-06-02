@@ -1,11 +1,11 @@
   <h2>
-    There are <div class="count"><%= Contact.count%></div>contacts
+    There are <span class="count"><%= Contact.count%></span> contacts
   </h2>
 
     <% @contacts.each do |contact| %>
   <p>
     <%= contact.full_name %>
     (<%= contact.email %>)
-    <span>Edit | Delete</span>
+    <div class="edit">Edit | Delete</div>
   </p>
   <% end %>

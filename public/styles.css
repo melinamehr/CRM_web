@@ -7,6 +7,12 @@ body {
 
 }
 
+main {
+  width: 80%;
+  margin: auto;
+
+}
+
 /*bitmaker*/
 h1 {
   color: white;
@@ -45,7 +51,6 @@ h2 {
   font-size: 20px;
   font-weight: bold;
   font-family: helvetica;
-  max-width: 80%;
   box-sizing: border-box;
 
 }
@@ -62,7 +67,6 @@ p {
   font-weight: bolder;
   font-family: helvetica;
   display: block;
-  max-width: 80%;
   box-sizing: border-box;
 }
 
@@ -82,10 +86,6 @@ a:hover {
     color: #A9A9A9;
 }
 
-/*main {
-
-}*/
-
 .count {
   font-weight: bolder;
   text-decoration: underline;
@@ -104,7 +104,7 @@ h1 {
   border-bottom: 5px solid black;
 }*/
 
-span {
+.edit {
   display: block;
   font-size: 14px;
 }
