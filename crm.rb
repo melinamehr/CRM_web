@@ -19,7 +19,6 @@ require 'sinatra'
     erb :maline
   end
 
-
   get '/contacts/:id' do
   # params[:id]
   # 1. retrieve the recipe from the database
