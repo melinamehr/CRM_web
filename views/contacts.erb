@@ -1,9 +1,11 @@
-<h1>Contacts</h2>
-<ul>
-  <% @contacts.each do |contact| %>
-    <li>
-      <b> <%= contact.full_name %> </b></li>
-    <li><i> <%= contact.email %> </i></li>
-    <li> <%= contact.note %> </li>
+  <h2>
+    There are <div class="count"><%= Contact.count%></div>contacts
+  </h2>
+
+    <% @contacts.each do |contact| %>
+  <p>
+    <%= contact.full_name %>
+    (<%= contact.email %>)
+    <span>Edit | Delete</span>
+  </p>
   <% end %>
-</ul>

@@ -2,7 +2,7 @@ require_relative 'contact'
 require 'sinatra'
 
   get '/' do
-    redirect to ('/home')
+    redirect to ('/contacts')
   end
 
   get '/home' do
@@ -29,7 +29,7 @@ require 'sinatra'
   #params is the way to access information given to u
   #thru the url; to access the info in the url:
   #localhost2342/recipes/2 <--- that 2
-    erb:recipe
+    # erb:recipe
   end
 
 

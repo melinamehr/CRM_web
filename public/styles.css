@@ -1,31 +1,95 @@
+html {
+  width: 100%;
+
+}
+
 body {
 
 }
 
+/*bitmaker*/
 h1 {
   color: white;
   background-color: #292626;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 60px;
-  font-size: 36px;
+  margin-bottom: -10px;
+  font-size: 30px;
   font-weight: bolder;
+  font-family: helvetica;
 
 }
-header {
+
+/*home/add contact*/
+nav a {
   color: white;
   background-color: #D3D3D3;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  margin-top: 2px;
   text-align: center;
-  margin-bottom: 60px;
-  font-size: 36px;
+  margin-bottom: 0px;
+  font-size: 20px;
   font-weight: bolder;
+  font-family: helvetica;
+  display: block;
+}
+
+/*there are 3 contacts*/
+h2 {
+  color: black;
+  background-color: #E9967A;
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: helvetica;
+  max-width: 80%;
+  box-sizing: border-box;
 
 }
 
+/*contacts list */
+p {
+  color: black;
+  background-color: #66CDAA;
+  padding: 30px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: helvetica;
+  display: block;
+  max-width: 80%;
+  box-sizing: border-box;
+}
 
-main {
+h3 {
+  font-size: 12px;
+  font-family: helvetica;
 
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: white;
+}
+a:hover {
+    color: #A9A9A9;
+}
+
+/*main {
+
+}*/
+
+.count {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: #66CDAA;
 }
 
 footer {
@@ -33,9 +97,14 @@ footer {
   background-color: black;
   padding: 15px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 10px;
 }
-
+/*
 h1 {
   border-bottom: 5px solid black;
+}*/
+
+span {
+  display: block;
+  font-size: 14px;
 }
