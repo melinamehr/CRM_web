@@ -3,13 +3,22 @@
 - - - <%= @contact.note %>
 </p>
 
-<h3>Delete Contact?</h3>
 
-<form action='/contacts/<%= @contact.id %>' method='post'>
-  <input type='hidden' name='_method' value='delete'>
-  <input type='text' name='first_name' value='<%= @contact.first_name %>'>
-  <input type='text' name='last_name' value='<%= @contact.last_name %>'>
-  <input type='text' name='email' value='<%= @contact.email %>'>
-  <input type='text' name='note' value='<%= @contact.note %>'>
-  <input type='submit' value='Delete Contact'>
-</form>
+<nav>
+<a href="/contacts/<%=@contact.id%>/edit">Edit Contact</a>
+<a href="/contacts/<%=@contact.id%>/delete">Delete Contact</a>
+
+    <!-- <form action='/contacts/<%= @contact.id %>' method='post'>
+    <input type='hidden' name='_method' value='delete'>
+    <label for="first_name">First Name:</label>
+    <input type='text' name='first_name' value='<%= @contact.first_name %>'>
+    <label for="last_name">Last Name:</label>
+    <input type='text' name='last_name' value='<%= @contact.last_name %>'>
+    <label for="email">Email:</label>
+    <input type='text' name='email' value='<%= @contact.email %>'>
+    <label for="note">Note:</label>
+    <input type='text' name='note' value='<%= @contact.note %>'>
+    <input type='submit' value='Delete Contact'>
+  </form> -->
+
+</nav>

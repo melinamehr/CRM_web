@@ -22,6 +22,15 @@ require 'sinatra'
     erb :add_contact
   end
 
+  get '/contacts/:id/delete' do
+    @contact = Contact.find_by(id: params[:id].to_i)
+    if @contact
+      erb :delete
+    else
+      raise Sinatra::NotFound
+    end
+  end
+
   post '/contacts' do
     Contact.create(
     first_name: params[:first_name],
