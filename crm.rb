@@ -41,6 +41,16 @@ require 'sinatra'
     end
   end
 
+  delete '/contacts/:id' do
+  @contact = Contact.find_by(id: params[:id].to_i)
+  if @contact
+    @contact.delete
+    redirect to('/contacts')
+  else
+    raise Sinatra::NotFound
+  end
+end
+
   get '/contacts/:id' do
   # params[:id]
   # 1. retrieve the recipe from the database
