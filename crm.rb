@@ -32,7 +32,6 @@ require 'sinatra'
     redirect to('/contacts')
   end
 
-
   get '/contacts/:id' do
   # params[:id]
   # 1. retrieve the recipe from the database
@@ -44,14 +43,23 @@ require 'sinatra'
       elsif
         raise Sinatra::NotFound
     end
+  end
   # 2. render a recipe page
   #params is the way to access information given to u
   #thru the url; to access the info in the url:
   #localhost2342/recipes/2 <--- that 2
     # erb:recipe
-  end
 #   get '/contacts/:id' do
 #end
+
+get '/contacts/:id/edit' do
+  @contact = Contact.find_by(id: params[:id].to_i)
+  if @contact
+    erb :edit_contact
+  else
+    raise Sinatra::NotFound
+  end
+end
 
 
 after do
