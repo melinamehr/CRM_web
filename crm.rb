@@ -24,7 +24,8 @@ require 'sinatra'
   # 1. retrieve the recipe from the database
   #class method on recipe number, find that recipe numeber
   #then render the recipe page
-    @contact = Contact.find(params[:id])
+    @contact = Contact.find(params[:id].to_i)
+    erb :show_contact
   # 2. render a recipe page
   #params is the way to access information given to u
   #thru the url; to access the info in the url:
@@ -32,9 +33,9 @@ require 'sinatra'
     # erb:recipe
   end
 
-  get '/contacts/:id' do
-      erb :show_contact
-end
+#   get '/contacts/:id' do
+#
+# end
 
 
 after do
