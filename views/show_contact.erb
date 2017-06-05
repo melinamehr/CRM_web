@@ -1,12 +1,17 @@
+<header>
+  <nav>
+<a href="/contacts/<%=@contact.id%>/edit">Edit Contact</a>
+<a href="/contacts/<%=@contact.id%>/delete">Delete Contact</a>
+</nav>
+</header>
+
 <p>
 <%= @contact.full_name %> (<%= @contact.email %>)
 - - - <%= @contact.note %>
 </p>
 
 
-<nav>
-<a href="/contacts/<%=@contact.id%>/edit">Edit Contact</a>
-<a href="/contacts/<%=@contact.id%>/delete">Delete Contact</a>
+
 
     <!-- <form action='/contacts/<%= @contact.id %>' method='post'>
     <input type='hidden' name='_method' value='delete'>
@@ -20,5 +25,3 @@
     <input type='text' name='note' value='<%= @contact.note %>'>
     <input type='submit' value='Delete Contact'>
   </form> -->
-
-</nav>
