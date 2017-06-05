@@ -15,10 +15,13 @@ require 'sinatra'
   end
 
   get '/about_me' do
-
     erb :maline
   end
 
+  get '/contacts/form' do
+    erb :form
+  end
+  
   get '/contacts/:id' do
   # params[:id]
   # 1. retrieve the recipe from the database
@@ -27,9 +30,9 @@ require 'sinatra'
     @contact = Contact.find_by(id: params[:id].to_i)
       if @contact
         erb :show_contact
-      else
+      elsif
         raise Sinatra::NotFound
-      end
+    end
   # 2. render a recipe page
   #params is the way to access information given to u
   #thru the url; to access the info in the url:
