@@ -6,6 +6,6 @@
   <p>
     <a href="/contacts/<%=contact.id%>"><%= contact.full_name %></a>
     (<%= contact.email %>)
-    <span class="edit">Edit | Delete</span>
+    <span class="edit">  <a href="/contacts/<%=contact.id%>/edit">Edit</a> | Delete</span>
   </p>
   <% end %>

@@ -32,6 +32,15 @@ require 'sinatra'
     redirect to('/contacts')
   end
 
+  get '/contacts/:id/edit' do
+    @contact = Contact.find_by(id: params[:id].to_i)
+    if @contact
+      erb :edit_contact
+    else
+      raise Sinatra::NotFound
+    end
+  end
+
   get '/contacts/:id' do
   # params[:id]
   # 1. retrieve the recipe from the database
@@ -52,17 +61,10 @@ require 'sinatra'
 #   get '/contacts/:id' do
 #end
 
-get '/contacts/:id/edit' do
-  @contact = Contact.find_by(id: params[:id].to_i)
-  if @contact
-    erb :edit_contact
-  else
-    raise Sinatra::NotFound
-  end
-end
+
 
 put '/contacts/:id' do
-  @contact = Contact.find(params[:id].to_i)
+  @contact = Contact.find_by(id: params[:id].to_i)
   if @contact
     @contact.update(
     first_name: params[:first_name],
