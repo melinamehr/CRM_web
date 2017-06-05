@@ -18,10 +18,21 @@ require 'sinatra'
     erb :maline
   end
 
-  get '/contacts/form' do
-    erb :form
+  get '/contacts/add_contact' do
+    erb :add_contact
   end
-  
+
+  post '/contacts' do
+    Contact.create(
+    first_name: params[:first_name],
+    last_name:  params[:last_name],
+    email:      params[:email],
+    note:       params[:note]
+    )
+    redirect to('/contacts')
+  end
+
+
   get '/contacts/:id' do
   # params[:id]
   # 1. retrieve the recipe from the database
@@ -39,10 +50,8 @@ require 'sinatra'
   #localhost2342/recipes/2 <--- that 2
     # erb:recipe
   end
-
 #   get '/contacts/:id' do
-#
-# end
+#end
 
 
 after do
