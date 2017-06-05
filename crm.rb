@@ -32,6 +32,10 @@ require 'sinatra'
     # erb:recipe
   end
 
+  get '/contacts/:id' do
+      erb :show_contact
+end
+
 
 after do
     ActiveRecord::Base.connection.close
